@@ -1,0 +1,210 @@
+/* Variables */
+:root {
+    --color-bg-light: #ffffff;
+    --color-bg-dark: #121212;
+    --color-text-light: #1a1a1a;
+    --color-text-dark: #f1f1f1;
+    --color-primary: #006d77;
+}
+
+/* Transiciones y fuentes */
+body,
+.navbar,
+.hero,
+.icon-box,
+.highlight,
+footer {
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Modo claro */
+.light-mode {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-light);
+}
+
+.light-mode .navbar {
+    background-color: #ffffff !important;
+    color: var(--color-text-light);
+}
+
+.light-mode .hero {
+    /*background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;*/
+    background: url('../img/background-ia.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.light-mode .icon-box {
+    background-color: #f1f1f1;
+    color: var(--color-text-light);
+}
+
+.light-mode .highlight {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.light-mode footer {
+    background-color: #f8f9fa;
+    color: var(--color-text-light);
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+}
+
+
+.dark-mode .navbar {
+    background-color: #1a1a1a !important;
+    color: white !important;
+}
+
+.dark-mode .navbar .whitetitle {
+    color: white !important;
+}
+
+.dark-mode .hero {
+    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.dark-mode .icon-box {
+    background-color: #1c1c1c;
+    color: var(--color-text-dark);
+}
+
+.dark-mode .highlight {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.dark-mode footer {
+    background-color: #121212;
+    color: #ffffff !important;
+}
+
+.dark-mode .usos {
+    background-color: #121212;
+    color: #ffffff !important;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color-primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #00535c;
+}
+
+/* Hero overlay */
+.hero {
+    height: 80vh;
+    position: relative;
+    text-align: center;
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+/* Flip Cards */
+.flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.flip-front {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.flip-front {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.flip-back {
+    background-color: #f8f9fa;
+    color: var(--color-text-light);
+    transform: rotateY(180deg);
+}
+
+.click {
+    color: white;
+}
+
+#backToTopBtn {
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    opacity: 0.7;
+    /* Transparencia opcional */
+    transition: opacity 0.3s ease-in-out;
+    /* Transición suave para la opacidad */
+    background-color: #00FF00 !important;
+    /* Verde Matrix */
+    border-color: #00FF00 !important;
+    /* Borde verde Matrix */
+    color: #000 !important;
+    /* Color de texto si añades alguno */
+}
+
+#backToTopBtn:hover {
+    opacity: 1;
+    background-color: #0F0 !important;
+    /* Un verde ligeramente diferente al pasar el ratón */
+    border-color: #0F0 !important;
+}
+
+/* Para asegurarte de que el color primario de Bootstrap no interfiera */
+.btn-outline-primary {
+    color: #00FF00;
+    /* Color del texto/icono en estado normal (si Bootstrap lo aplica) */
+    border-color: #00FF00;
+}
+
+.btn-outline-primary:hover {
+    color: #000;
+    /* Color del texto/icono al pasar el ratón (si Bootstrap lo aplica) */
+    background-color: #00FF00;
+    border-color: #00FF00;
+}
+
+body.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
